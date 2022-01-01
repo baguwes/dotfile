@@ -5,8 +5,8 @@ add_newline = true
 
 # Change the default prompt format
 format = """\
-[╭╴](238)$env_var\
-$all[╰─](238)$character"""
+[╭╴](bold white)$env_var\
+$all[╰─](bold white)$character"""
 
 # Change the default prompt characters
 [character]
@@ -15,7 +15,7 @@ error_symbol = "[❯](bold red)"
 
 # Shows an icon that should be included by zshrc script based on the distribution or os
 [env_var.STARSHIP_DISTRO]
-format = '[$env_value](bold white) '
+format = '[$env_value](bold white)'
 variable = "STARSHIP_DISTRO"
 disabled = false
 
@@ -24,8 +24,8 @@ disabled = false
 style_user = "white bold"
 style_root = "black bold"
 format = "[$user]($style) "
-disabled = false
 show_always = true
+disabled = false
 
 [sudo]
 style = "bold green"
@@ -49,6 +49,7 @@ read_only = "🔒"
 read_only_style = "red"
 home_symbol = "~"
 format = "[$path]($style)[$read_only]($read_only_style) "
+disabled = "false"
 
 [docker_context]
 format = "via [$symbol$context]($style) "
@@ -62,14 +63,17 @@ symbol = "🌱 "
 style = "bold blue"
 truncation_length = 12
 truncation_symbol = ""
+disabled = "false"
 
 [git_commit]
 commit_hash_length = 4
 tag_symbol = "🔖 "
+disabled = "false"
 
 [git_metrics]
 added_style = "bold blue"
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+disabled = "false"
 
 [git_status]
 conflicted = "🏳"
@@ -83,3 +87,4 @@ modified = "📝"
 staged = '[++\($count\)](green)'
 renamed = "👅"
 deleted = "🗑"
+disabled = "false"
