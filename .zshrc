@@ -135,7 +135,7 @@ case $_distro in
     *devuan*)                ICON="";;
     *manjaro*)               ICON="";;
     *rhel*)                  ICON="";;
-    *)                       ICON="";;
+    *)                       ICON="";;
 esac
 
 # Load Starship
